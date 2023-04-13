@@ -1,0 +1,10 @@
+---
+title: "Little Miss Sunshine"
+filters:
+  - lightbox
+lightbox: auto
+params:
+  abbrev: "LittleMiss"
+---
+
+{{< include _clip_info.qmd >}}

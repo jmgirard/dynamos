@@ -1,0 +1,10 @@
+---
+title: "The Parent Trap"
+filters:
+  - lightbox
+lightbox: auto
+params:
+  abbrev: "ParentTrap"
+---
+
+{{< include _clip_info.qmd >}}

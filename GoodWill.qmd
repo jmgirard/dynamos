@@ -1,0 +1,10 @@
+---
+title: "Good Will Hunting"
+filters:
+  - lightbox
+lightbox: auto
+params:
+  abbrev: "GoodWill"
+---
+
+{{< include _clip_info.qmd >}}

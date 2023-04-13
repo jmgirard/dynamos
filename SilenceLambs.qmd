@@ -1,0 +1,10 @@
+---
+title: "The Silence of the Lambs"
+filters:
+  - lightbox
+lightbox: auto
+params:
+  abbrev: "SilenceLambs"
+---
+
+{{< include _clip_info.qmd >}}

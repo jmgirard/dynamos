@@ -1,0 +1,118 @@
+---
+title: "Holistic Omega"
+---
+
+```{r}
+#| message: false
+
+library(tidyverse)
+library(lavaan)
+library(semTools)
+library(knitr)
+library(kableExtra)
+```
+
+```{r}
+#| echo: false
+
+source("./R/functions.R")
+info_df <- get_info_df()
+valence_df <- get_valence_df()
+holistic_df <- get_holistic_df()
+```
+
+```{r}
+holistic_df |> 
+  select(-Scale) |> 
+  pivot_wider(
+    names_from = "Item",
+    values_from = "Rating"
+  ) |> 
+  mutate(
+    Pos = rowMeans(
+      across(c(Alert, Determined, Enthusiastic, Excited, Inspired)),
+      na.rm = TRUE
+    ),
+    Neg = rowMeans(
+      across(c(Afraid, Distressed, Nervous, Scared, Upset)),
+      na.rm = TRUE
+    )
+  ) |> 
+  group_by(Abbrev) |> 
+  summarize(
+    Pos = mean(Pos),
+    Neg = mean(Neg)
+  ) |> 
+  arrange(Abbrev) |> 
+  kable(digits = 2) |> 
+  kable_styling()
+```
+
+
+```{r}
+#| message: false
+#| warning: false
+
+pos_model <- 'pos =~ Alert + Determined + Enthusiastic + Excited + Inspired'
+neg_model <- 'neg =~ Afraid + Distressed + Nervous + Scared + Upset'
+
+safe_cfa <- safely(cfa)
+
+hdf_nested <- 
+  holistic_df |> 
+  select(-Scale) |> 
+  pivot_wider(
+    names_from = "Item",
+    values_from = "Rating"
+  ) |> 
+  mutate(Rater = as.character(Rater)) |> 
+  nest(data = -Abbrev) |> 
+  mutate(
+    pos_cfa = map(
+      data, 
+      \(x) safe_cfa(
+        pos_model, 
+        data = drop_na(x), 
+        std.lv = TRUE, 
+        ordered = TRUE, 
+        estimator = "WLSMV"
+      )
+    ),
+    neg_cfa = map(
+      data, 
+      \(x) safe_cfa(
+        neg_model, 
+        data = drop_na(x), 
+        std.lv = TRUE, 
+        ordered = TRUE, 
+        estimator = "WLSMV"
+      )
+    ),
+    pos_rel = map(pos_cfa, \(x) reliability(x$result)),
+    neg_rel = map(neg_cfa, \(x) reliability(x$result)),
+    pos_omega = map_dbl(pos_rel, \(x) x[[3]]),
+    neg_omega = map_dbl(neg_rel, \(x) x[[3]])
+  ) |> 
+  print()
+```
+
+```{r}
+hdf_nested |> 
+  select(Abbrev, ends_with("_omega")) |> 
+  arrange(Abbrev) |> 
+  kable(digits = 2) |> 
+  kable_styling()
+```
+
+
+```{r}
+hdf_nested |> 
+  summarize(
+    across(
+      pos_omega:neg_omega, 
+      .fns = list(m = mean, s = sd, min = min, max = max))
+  ) |> 
+  kable(digits = 2) |> 
+  kable_styling()
+```
+

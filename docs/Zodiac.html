@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.323">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>DynAMoS Database - Zodiac</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">DynAMoS Database</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./overview.html" rel="" target="">
+ <span class="menu-text">Database Info.</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-movie-clip-info." role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Movie Clip Info.</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-movie-clip-info.">    
+        <li>
+    <a class="dropdown-item" href="./AkeelahBee.html" rel="" target="">
+ <span class="dropdown-text">[AkeelahBee] Akeelah and the Bee</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./BealeStreet.html" rel="" target="">
+ <span class="dropdown-text">[BealeStreet] If Beale Street Could Talk</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./CatchMe.html" rel="" target="">
+ <span class="dropdown-text">[CatchMe] Catch Me If You Can</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./DaysSummer.html" rel="" target="">
+ <span class="dropdown-text">[DaysSummer] 500 Days of Summer</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Fences.html" rel="" target="">
+ <span class="dropdown-text">[Fences] Fences</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ForrestGump.html" rel="" target="">
+ <span class="dropdown-text">[ForrestGump] Forrest Gump</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./GoodWill.html" rel="" target="">
+ <span class="dropdown-text">[GoodWill] Good Will Hunting</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./GreenMile.html" rel="" target="">
+ <span class="dropdown-text">[GreenMile] The Green Mile</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./KingsSpeech.html" rel="" target="">
+ <span class="dropdown-text">[KingsSpeech] The King’s Speech</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./LadyBird.html" rel="" target="">
+ <span class="dropdown-text">[LadyBird] Lady Bird</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./LegallyBlonde.html" rel="" target="">
+ <span class="dropdown-text">[LegallyBlonde] Legally Blonde</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./LittleMiss.html" rel="" target="">
+ <span class="dropdown-text">[LittleMiss] Little Miss Sunshine</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./MarriageStory.html" rel="" target="">
+ <span class="dropdown-text">[MarriageStory] Marriage Story</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Miracle.html" rel="" target="">
+ <span class="dropdown-text">[Miracle] Miracle</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Moonlight.html" rel="" target="">
+ <span class="dropdown-text">[Moonlight] Moonlight</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./NoCountry.html" rel="" target="">
+ <span class="dropdown-text">[NoCountry] No Country for Old Men</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ParentTrap.html" rel="" target="">
+ <span class="dropdown-text">[ParentTrap] The Parent Trap</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./PursuitHappyness.html" rel="" target="">
+ <span class="dropdown-text">[PursuitHappyness] The Pursuit of Happyness</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./SilenceLambs.html" rel="" target="">
+ <span class="dropdown-text">[SilenceLambs] The Silence of the Lambs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./SocialNetwork.html" rel="" target="">
+ <span class="dropdown-text">[SocialNetwork] The Social Network</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Zodiac.html" rel="" target="">
+ <span class="dropdown-text">[Zodiac] Zodiac</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Request Access</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#film-information" id="toc-film-information" class="nav-link active" data-scroll-target="#film-information">Film Information</a></li>
+  <li><a href="#clip-information" id="toc-clip-information" class="nav-link" data-scroll-target="#clip-information">Clip Information</a></li>
+  <li><a href="#subtitles" id="toc-subtitles" class="nav-link" data-scroll-target="#subtitles">Subtitles</a></li>
+  <li><a href="#holistic-ratings" id="toc-holistic-ratings" class="nav-link" data-scroll-target="#holistic-ratings">Holistic Ratings</a></li>
+  <li><a href="#dynamic-ratings" id="toc-dynamic-ratings" class="nav-link" data-scroll-target="#dynamic-ratings">Dynamic Ratings</a>
+  <ul class="collapse">
+  <li><a href="#chromodoris-plot" id="toc-chromodoris-plot" class="nav-link" data-scroll-target="#chromodoris-plot">Chromodoris Plot</a></li>
+  <li><a href="#inter-rater-reliability" id="toc-inter-rater-reliability" class="nav-link" data-scroll-target="#inter-rater-reliability">Inter-Rater Reliability</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Zodiac</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="film-information" class="level2">
+<h2 class="anchored" data-anchor-id="film-information">Film Information</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<strong><em>Zodiac</em></strong> is a 2007 American mystery thriller film directed by David Fincher from a screenplay by James Vanderbilt, based on the non-fiction books by Robert Graysmith, Zodiac and Zodiac Unmasked, which were published in 1986 and 2002, respectively. The film stars Jake Gyllenhaal, Mark Ruffalo, and Robert Downey Jr.&nbsp;with Anthony Edwards, Brian Cox, Elias Koteas, Donal Logue, John Carroll Lynch, Chloë Sevigny, Philip Baker Hall and Dermot Mulroney in supporting roles.
+<p>
+</p><blockquote class="blockquote">
+All information in this section came from <a href="https://en.wikipedia.org/wiki/Zodiac_(film)">Wikipedia</a>.
+</blockquote>
+<p></p>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column poster" style="width:20%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./img/posters/Zodiac_poster.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="./img/posters/Zodiac_poster.webp" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="clip-information" class="level2">
+<h2 class="anchored" data-anchor-id="clip-information">Clip Information</h2>
+<p>Robert Graysmith has been investigating the string of killings in and around San Francisco attributed to the Zodiac Killer. He is visiting the house of Bob Vaughn, a silent film organist who used to work with one of Graysmith’s suspects, Rick Marshall.</p>
+<div class="cell" data-hash="Zodiac_cache/html/info_616cc237348b668d787eacbe961240e6">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Abbrev</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Film</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Clip Start</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Clip Stop</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Zodiac</td>
+<td style="text-align: left;">Zodiac (2007)</td>
+<td style="text-align: left;">02:16:07.000</td>
+<td style="text-align: left;">02:21:36.000</td>
+<td style="text-align: right;">315</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<div class="cell" data-hash="Zodiac_cache/html/mediainfo_4cad0661a798e24907da6312dcc33c5e">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Characteristic</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Format</td>
+<td style="text-align: left;">MPEG-4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">File Size</td>
+<td style="text-align: left;">74.8 MiB</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Duration</td>
+<td style="text-align: left;">329.038</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Frame Rate</td>
+<td style="text-align: left;">23.976</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Video Width</td>
+<td style="text-align: left;">1920</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Video Height</td>
+<td style="text-align: left;">800</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Video BitRate</td>
+<td style="text-align: left;">1.6 MB/s</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Audio Channels</td>
+<td style="text-align: left;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Audio SamplingRate</td>
+<td style="text-align: left;">48000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Audio BitRate</td>
+<td style="text-align: left;">341.1 kB/s</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col">
+<img src="./img/screenshots/Zodiac_01.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/Zodiac_02.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/Zodiac_03.webp" class="lightbox">
+</div>
+</div>
+<div class="row">
+<div class="col">
+<img src="./img/screenshots/Zodiac_04.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/Zodiac_05.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/Zodiac_06.webp" class="lightbox">
+</div>
+</div>
+<div class="row">
+<div class="col">
+<img src="./img/screenshots/Zodiac_07.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/Zodiac_08.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/Zodiac_09.webp" class="lightbox">
+</div>
+</div>
+<div class="row">
+<div class="col">
+<img src="./img/screenshots/Zodiac_10.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/Zodiac_11.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/Zodiac_12.webp" class="lightbox">
+</div>
+</div>
+</div>
+</section>
+<section id="subtitles" class="level2">
+<h2 class="anchored" data-anchor-id="subtitles">Subtitles</h2>
+<p>The following wordcloud shows the words used in this clip, scaled by number of occurrences and colored by sentiment (orange = negative, green = positive, grey = neutral or unsure). Note that the words have been stemmed and lemmatized and stopwords have been removed.</p>
+<div class="cell" data-hash="Zodiac_cache/html/wordcloud_456c0fc19cac9b16b3de0738a41c79e1">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Zodiac_files/figure-html/wordcloud-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="Zodiac_files/figure-html/wordcloud-1.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The table below shows all subtitles in this clip with the start and stop time of each subtitle’s appearance in seconds.</p>
+<div class="cell" data-hash="Zodiac_cache/html/subtitle_df_9d36d820e3b0b75bea879119f8101dc7">
+<div class="cell-output-display">
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:300px; ">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">Start</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">End</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">Subtitle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">17.74</td>
+<td style="text-align: right;">19.64</td>
+<td style="text-align: left;">Watch your step.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">20.81</td>
+<td style="text-align: right;">22.71</td>
+<td style="text-align: left;">Come in.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">23.91</td>
+<td style="text-align: right;">25.81</td>
+<td style="text-align: left;">-Very nice house. -Oh, thank you.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">27.11</td>
+<td style="text-align: right;">29.01</td>
+<td style="text-align: left;">It's very rustic.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">29.05</td>
+<td style="text-align: right;">30.95</td>
+<td style="text-align: left;">-Can I take your jacket? -No, thank you, I'm fine.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">32.32</td>
+<td style="text-align: right;">34.32</td>
+<td style="text-align: left;">Okay. This way, please.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">37.09</td>
+<td style="text-align: right;">38.93</td>
+<td style="text-align: left;">-Have a seat. -Thank you.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">38.93</td>
+<td style="text-align: right;">40.83</td>
+<td style="text-align: left;">-How about some tea? -Oh, no, I'm all right.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">41.56</td>
+<td style="text-align: right;">43.46</td>
+<td style="text-align: left;">-You sure? -Yes.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">43.90</td>
+<td style="text-align: right;">45.80</td>
+<td style="text-align: left;">I wanted to ask you about a film that the Avenue may have played</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">47.73</td>
+<td style="text-align: right;">49.63</td>
+<td style="text-align: left;">while you were the organist there.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">49.74</td>
+<td style="text-align: right;">51.64</td>
+<td style="text-align: left;">The Most Dangerous Game?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">52.11</td>
+<td style="text-align: right;">54.01</td>
+<td style="text-align: left;">Oh, it's a classic. RKO. 1932.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">55.54</td>
+<td style="text-align: right;">57.44</td>
+<td style="text-align: left;">Fay Wray, Joel McCrea, Leslie Banks. We've run that picture many times.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">60.35</td>
+<td style="text-align: right;">62.25</td>
+<td style="text-align: left;">In '68, '69?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">63.48</td>
+<td style="text-align: right;">65.38</td>
+<td style="text-align: left;">I'd have to check my records. Why?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">65.79</td>
+<td style="text-align: right;">67.89</td>
+<td style="text-align: left;">Do you remember the Zodiac?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">70.09</td>
+<td style="text-align: right;">71.99</td>
+<td style="text-align: left;">This is about Rick Marshall, isn't it?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">72.46</td>
+<td style="text-align: right;">74.36</td>
+<td style="text-align: left;">-He was a projectionist there, right? -For a time, yes.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">75.96</td>
+<td style="text-align: right;">77.86</td>
+<td style="text-align: left;">But I have no occasion to correspond with him these days.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">80.10</td>
+<td style="text-align: right;">82.00</td>
+<td style="text-align: left;">Okay. Well, there is a connection</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">82.67</td>
+<td style="text-align: right;">84.57</td>
+<td style="text-align: left;">between one of the Zodiac attacks and that film.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">85.54</td>
+<td style="text-align: right;">87.44</td>
+<td style="text-align: left;">You mean the symbol?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">88.54</td>
+<td style="text-align: right;">90.31</td>
+<td style="text-align: left;">Hold on.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">90.31</td>
+<td style="text-align: right;">94.45</td>
+<td style="text-align: left;">The Zodiac symbol on film. It's on the countdown.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">98.32</td>
+<td style="text-align: right;">100.22</td>
+<td style="text-align: left;">It's trimmed off each reel before it's shown,</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">101.02</td>
+<td style="text-align: right;">102.92</td>
+<td style="text-align: left;">but it always arrives with it.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">103.66</td>
+<td style="text-align: right;">105.56</td>
+<td style="text-align: left;">Right there.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">105.66</td>
+<td style="text-align: right;">109.37</td>
+<td style="text-align: left;">The first time I saw it in the papers, I thought about that.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">110.20</td>
+<td style="text-align: right;">111.83</td>
+<td style="text-align: left;">We got a tip</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">111.83</td>
+<td style="text-align: right;">113.73</td>
+<td style="text-align: left;">that Rick left a film canister here that he told you never to open.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">115.90</td>
+<td style="text-align: right;">119.04</td>
+<td style="text-align: left;">A tip about a mysterious film canister?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">119.87</td>
+<td style="text-align: right;">121.77</td>
+<td style="text-align: left;">Is it true?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">123.14</td>
+<td style="text-align: right;">125.01</td>
+<td style="text-align: left;">Yes.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">125.01</td>
+<td style="text-align: right;">126.91</td>
+<td style="text-align: left;">-Did you open it? -No.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">127.41</td>
+<td style="text-align: right;">131.73</td>
+<td style="text-align: left;">-May I see it? -Rick took it back in 1972.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">133.42</td>
+<td style="text-align: right;">135.32</td>
+<td style="text-align: left;">This tip is how you got it in your head that Rick is the Zodiac?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">138.29</td>
+<td style="text-align: right;">140.06</td>
+<td style="text-align: left;">That and the poster.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">140.06</td>
+<td style="text-align: right;">141.96</td>
+<td style="text-align: left;">The poster?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">143.36</td>
+<td style="text-align: right;">145.23</td>
+<td style="text-align: left;">The poster that Rick drew.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">145.23</td>
+<td style="text-align: right;">147.13</td>
+<td style="text-align: left;">The handwriting is the closest that we have ever come to a match.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">148.54</td>
+<td style="text-align: right;">150.44</td>
+<td style="text-align: left;">-Rick didn't draw any posters. -No, he drew this one.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">151.91</td>
+<td style="text-align: right;">155.38</td>
+<td style="text-align: left;">Mr. Graysmith, I do the posters myself.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">156.74</td>
+<td style="text-align: right;">158.64</td>
+<td style="text-align: left;">That's my handwriting.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">166.85</td>
+<td style="text-align: right;">168.75</td>
+<td style="text-align: left;">I won't take any more of your time.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">169.82</td>
+<td style="text-align: right;">171.72</td>
+<td style="text-align: left;">Why don't I just go and find out when we played that film?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">175.30</td>
+<td style="text-align: right;">176.86</td>
+<td style="text-align: left;">Oh, that's all right.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">176.86</td>
+<td style="text-align: right;">180.31</td>
+<td style="text-align: left;">It's not a problem. They're just down in the basement.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">182.10</td>
+<td style="text-align: right;">185.05</td>
+<td style="text-align: left;">Not many people have basements in California.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">187.71</td>
+<td style="text-align: right;">189.61</td>
+<td style="text-align: left;">I do.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">190.98</td>
+<td style="text-align: right;">192.98</td>
+<td style="text-align: left;">You coming, Mr. Graysmith?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">204.26</td>
+<td style="text-align: right;">207.97</td>
+<td style="text-align: left;">The original studio one-sheets, I always kept for myself.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">209.83</td>
+<td style="text-align: right;">211.73</td>
+<td style="text-align: left;">The cheapo knock-offs like you brought today</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">212.47</td>
+<td style="text-align: right;">215.61</td>
+<td style="text-align: left;">I end up tossing into the back alley.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">230.08</td>
+<td style="text-align: right;">231.98</td>
+<td style="text-align: left;">'69.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">237.29</td>
+<td style="text-align: right;">238.62</td>
+<td style="text-align: left;">You live alone?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">238.63</td>
+<td style="text-align: right;">240.53</td>
+<td style="text-align: left;">Most Dangerous Game ran in May '69.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">244.50</td>
+<td style="text-align: right;">246.98</td>
+<td style="text-align: left;">So, that would be about</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">247.87</td>
+<td style="text-align: right;">251.18</td>
+<td style="text-align: left;">nine weeks before the first Zodiac letter, correct?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">254.07</td>
+<td style="text-align: right;">255.97</td>
+<td style="text-align: left;">Yeah.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">259.65</td>
+<td style="text-align: right;">263.96</td>
+<td style="text-align: left;">Do you think he saw the film in our theater and was inspired?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">270.02</td>
+<td style="text-align: right;">272.94</td>
+<td style="text-align: left;">Are you sure there's nobody else in the house?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">274.53</td>
+<td style="text-align: right;">277.24</td>
+<td style="text-align: left;">Would you like to go upstairs and check?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">277.93</td>
+<td style="text-align: right;">279.83</td>
+<td style="text-align: left;">No.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">282.07</td>
+<td style="text-align: right;">284.64</td>
+<td style="text-align: left;">Thank you. Thanks for everything.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">285.47</td>
+<td style="text-align: right;">287.37</td>
+<td style="text-align: left;">You're welcome.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">308.23</td>
+<td style="text-align: right;">310.13</td>
+<td style="text-align: left;">It's locked.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">320.47</td>
+<td style="text-align: right;">322.37</td>
+<td style="text-align: left;">Thank you.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">324.91</td>
+<td style="text-align: right;">326.95</td>
+<td style="text-align: left;">Good night, Mr. Graysmith!</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+</div>
+</section>
+<section id="holistic-ratings" class="level2">
+<h2 class="anchored" data-anchor-id="holistic-ratings">Holistic Ratings</h2>
+<p>A total of 76 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five Positive Affect items (i.e., <em>alert</em>, <em>determined</em>, <em>enthusiastic</em>, <em>excited</em>, <em>inspired</em>) and five Negative Affect items (i.e., <em>afraid</em>, <em>distressed</em>, <em>nervous</em>, <em>scared</em>, <em>upset</em>), each rated on an ordinal scale from 0 to 4. The plot below shows the distribution of scale scores (boxplot plus individual ratings).</p>
+<div class="cell" data-hash="Zodiac_cache/html/holistic_plot_86cbdfa483aa67cf8ba2bd26e540cc1a">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Zodiac_files/figure-html/holistic_plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="Zodiac_files/figure-html/holistic_plot-1.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="dynamic-ratings" class="level2">
+<h2 class="anchored" data-anchor-id="dynamic-ratings">Dynamic Ratings</h2>
+<p>A total of 75 participants watched this film clip and used the <a href="https://carma.jmgirard.com">CARMA software</a> to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional <em>valence</em> scale ranging from -4 (very negative) to 4 (very positive).</p>
+<section id="chromodoris-plot" class="level3">
+<h3 class="anchored" data-anchor-id="chromodoris-plot">Chromodoris Plot</h3>
+<p>We can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.</p>
+<div class="cell" data-hash="Zodiac_cache/html/valence_plot_86252367317b51adc9ff21741ab844be">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Zodiac_files/figure-html/valence_plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="Zodiac_files/figure-html/valence_plot-1.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="inter-rater-reliability" class="level3">
+<h3 class="anchored" data-anchor-id="inter-rater-reliability">Inter-Rater Reliability</h3>
+<p>A Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). The lower and upper columns in the table below represent the boundaries of the 95% equal-tail credible interval. Note that we dropped the first 10 seconds of each clip (as rater “warmup” time).</p>
+<div class="cell" data-hash="Zodiac_cache/html/var_summary_26e2d45542afbc69234892c29272badb">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Component</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Term</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Estimate</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Lower</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Upper</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Rater</td>
+<td style="text-align: left;">Variance</td>
+<td style="text-align: right;">0.737</td>
+<td style="text-align: right;">0.558</td>
+<td style="text-align: right;">1.051</td>
+<td style="text-align: right;">0.295</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Timepoint</td>
+<td style="text-align: left;">Variance</td>
+<td style="text-align: right;">1.103</td>
+<td style="text-align: right;">0.949</td>
+<td style="text-align: right;">1.311</td>
+<td style="text-align: right;">0.441</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Residual</td>
+<td style="text-align: left;">Variance</td>
+<td style="text-align: right;">0.660</td>
+<td style="text-align: right;">0.648</td>
+<td style="text-align: right;">0.672</td>
+<td style="text-align: right;">0.264</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>From these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k).</p>
+<div class="cell" data-hash="Zodiac_cache/html/icc_summary_2a703fc1e377083a4dd9b4de7617e6ae">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Term</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Estimate</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Lower</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Upper</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Raters</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Error</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ICC(C,k)</td>
+<td style="text-align: right;">0.992</td>
+<td style="text-align: right;">0.991</td>
+<td style="text-align: right;">0.993</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: left;">Relative</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>Below, we can also visualize the posterior distributions of each of these parameters. Values with higher posterior density are more probable.</p>
+<div class="cell" data-hash="Zodiac_cache/html/icc_plot_16b0bb601c2b0a1b93c2ff8dcd51defa">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Zodiac_files/figure-html/icc_plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="Zodiac_files/figure-html/icc_plot-1.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","loop":true,"selector":".lightbox"});</script>
+
+
+
+</body></html>

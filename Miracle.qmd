@@ -1,0 +1,10 @@
+---
+title: "Miracle"
+filters:
+  - lightbox
+lightbox: auto
+params:
+  abbrev: "Miracle"
+---
+
+{{< include _clip_info.qmd >}}

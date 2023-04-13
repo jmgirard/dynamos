@@ -1,0 +1,10 @@
+---
+title: "The Social Network"
+filters:
+  - lightbox
+lightbox: auto
+params:
+  abbrev: "SocialNetwork"
+---
+
+{{< include _clip_info.qmd >}}

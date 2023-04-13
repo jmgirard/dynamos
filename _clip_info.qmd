@@ -1,0 +1,232 @@
+```{r setup}
+#| echo: false
+#| message: false
+
+source("./R/functions.R")
+valence_df <- get_valence_df(params$abbrev)
+holistic_df <- get_holistic_df(params$abbrev)
+info_df <- get_info_df(params$abbrev)
+mediainfo_df <- get_mediainfo_df(params$abbrev)
+subtitle_df <- get_subtitle_df(params$abbrev)
+```
+
+## Film Information
+
+::: columns
+::: {.column width="70%"}
+```{r wikipedia}
+#| echo: false
+#| output: asis
+
+cat(info_df$Summary)
+
+cat(glue::glue('<p><blockquote>All information in this section came from [Wikipedia]({info_df$Wikipedia}).</blockquote></p>'))
+```
+
+:::
+::: {.column width="10%"}
+:::
+::: {.column width="20%" .poster}
+```{r poster}
+#| echo: false
+#| output: asis
+
+cat(glue::glue('![](./img/posters/{params$abbrev}_poster.webp)'))
+```
+
+:::
+:::
+
+## Clip Information
+
+```{r description}
+#| echo: false
+#| output: asis
+
+cat(info_df$Description)
+```
+
+```{r info}
+#| echo: false
+#| cache: true
+
+info_df |> 
+  dplyr::select(Abbrev, Film, Clip_Start, Clip_Stop, Duration) |> 
+  dplyr::rename_all(stringr::str_replace, pattern = "_", replacement = " ") |> 
+  knitr::kable() |> 
+  kableExtra::kable_styling()
+```
+
+```{r mediainfo}
+#| echo: false
+#| cache: true
+
+mediainfo_df |> 
+  dplyr::select(-Abbrev) |> 
+  dplyr::mutate(dplyr::across(where(is.numeric), as.character)) |> 
+  tidyr::pivot_longer(
+    dplyr::everything(), 
+    names_to = "Characteristic", 
+    values_to = "Value"
+  ) |> 
+  dplyr::mutate(Characteristic = stringr::str_replace_all(Characteristic, "_", " ")) |> 
+  knitr::kable() |> 
+  kableExtra::kable_styling()
+```
+
+```{r screenshots}
+#| echo: false
+#| output: asis
+
+cat(glue::glue('
+<div class="container">
+<div class="row">
+<div class="col"><img src="./img/screenshots/{params$abbrev}_01.webp" class="lightbox"></div>
+<div class="col"><img src="./img/screenshots/{params$abbrev}_02.webp" class="lightbox"></div>
+<div class="col"><img src="./img/screenshots/{params$abbrev}_03.webp" class="lightbox"></div>
+</div>
+<div class="row">
+<div class="col"><img src="./img/screenshots/{params$abbrev}_04.webp" class="lightbox"></div>
+<div class="col"><img src="./img/screenshots/{params$abbrev}_05.webp" class="lightbox"></div>
+<div class="col"><img src="./img/screenshots/{params$abbrev}_06.webp" class="lightbox"></div>
+</div>
+<div class="row">
+<div class="col"><img src="./img/screenshots/{params$abbrev}_07.webp" class="lightbox"></div>
+<div class="col"><img src="./img/screenshots/{params$abbrev}_08.webp" class="lightbox"></div>
+<div class="col"><img src="./img/screenshots/{params$abbrev}_09.webp" class="lightbox"></div>
+</div>
+<div class="row">
+<div class="col"><img src="./img/screenshots/{params$abbrev}_10.webp" class="lightbox"></div>
+<div class="col"><img src="./img/screenshots/{params$abbrev}_11.webp" class="lightbox"></div>
+<div class="col"><img src="./img/screenshots/{params$abbrev}_12.webp" class="lightbox"></div>
+</div>
+</div>
+'))
+```
+
+## Subtitles
+
+The following wordcloud shows the words used in this clip, scaled by number of occurrences and colored by sentiment (orange = negative, green = positive, grey = neutral or unsure). Note that the words have been stemmed and lemmatized and stopwords have been removed.
+
+```{r wordcloud}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 5
+#| out-width: "100%"
+#| cache: true
+
+create_wordcloud_clip(subtitle_df)
+```
+
+The table below shows all subtitles in this clip with the start and stop time of each subtitle's appearance in seconds.
+
+```{r subtitle_df}
+#| echo: false
+#| cache: true
+
+subtitle_df |> 
+  dplyr::select(Start = start, End = end, Subtitle = subtitle) |> 
+  knitr::kable(escape = FALSE) |> 
+  kableExtra::kable_styling() |> 
+  kableExtra::scroll_box(height = "300px")
+```
+
+
+## Holistic Ratings
+
+A total of `r length(unique(holistic_df$Rater))` participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five Positive Affect items (i.e., *alert*, *determined*, *enthusiastic*, *excited*, *inspired*) and five Negative Affect items (i.e., *afraid*, *distressed*, *nervous*, *scared*, *upset*), each rated on an ordinal scale from 0 to 4. The plot below shows the distribution of scale scores (boxplot plus individual ratings).
+
+```{r holistic_plot}
+#| echo: false
+#| message: false
+#| fig-width: 7
+#| fig-height: 4
+#| out-width: "100%"
+#| cache: true
+
+create_holistic_plot(holistic_df)
+```
+
+## Dynamic Ratings
+
+A total of `r length(unique(valence_df$Rater))` participants watched this film clip and used the [CARMA software](https://carma.jmgirard.com) to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional *valence* scale ranging from -4 (very negative) to 4 (very positive).
+
+### Chromodoris Plot
+
+We can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.
+
+```{r valence_plot}
+#| echo: false
+#| message: false
+#| fig-width: 7
+#| fig-height: 5
+#| out-width: "100%"
+#| cache: true
+
+create_valence_plot(valence_df)
+```
+
+### Inter-Rater Reliability
+
+```{r icc_res}
+#| echo: false
+#| message: false
+#| cache: true
+
+icc_res <- estimate_valence_icc_clip(valence_df, info_df)
+```
+
+A Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). The lower and upper columns in the table below represent the boundaries of the 95% equal-tail credible interval. Note that we dropped the first 10 seconds of each clip (as rater "warmup" time).
+
+```{r var_summary}
+#| echo: false
+#| cache: true
+
+summary(icc_res, which = "variances") |> 
+  dplyr::rename_all(.funs = stringr::str_to_title) |> 
+  knitr::kable(digits = 3) |> 
+  kableExtra::kable_styling()
+```
+
+From these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k).
+
+```{r icc_summary}
+#| echo: false
+#| cache: true
+
+icc_summary <- 
+  summary(icc_res, which = "iccs") |> 
+  dplyr::rename_all(.funs = stringr::str_to_title) |> 
+  dplyr::filter(Term == "ICC(C,k)")
+
+icc_summary |> 
+  dplyr::mutate(Abbrev = params$abbrev, .before = 1) |> 
+  readr::write_csv(glue::glue("data/icc/icc_{params$abbrev}.csv"))
+
+icc_summary |> 
+  dplyr::select(-Score) |> 
+  knitr::kable(digits = 3) |> 
+  kableExtra::kable_styling()
+```
+
+Below, we can also visualize the posterior distributions of each of these parameters. Values with higher posterior density are more probable.
+
+```{r icc_plot}
+#| echo: false
+#| warning: false
+#| fig-width: 7
+#| fig-height: 4
+#| out-width: "100%"
+#| cache: true
+
+plot(
+  icc_res, 
+  parameters = c(
+    "Timepoint Variance", 
+    "Rater Variance", 
+    "Residual Variance", 
+    "ICC(C,k)"
+  ),
+  panel_spacing = 4
+)
+```

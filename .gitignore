@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+data/icc/icc_*.rds
+gstudy.rds
+/.quarto/
+/*_cache/
+/*_files/
+data/private/

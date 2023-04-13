@@ -1,0 +1,10 @@
+---
+title: "Forrest Gump"
+filters:
+  - lightbox
+lightbox: auto
+params:
+  abbrev: "ForrestGump"
+---
+
+{{< include _clip_info.qmd >}}

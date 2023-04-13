@@ -1,0 +1,10 @@
+---
+title: "Marriage Story"
+filters:
+  - lightbox
+lightbox: auto
+params:
+  abbrev: "MarriageStory"
+---
+
+{{< include _clip_info.qmd >}}

@@ -1,0 +1,10 @@
+---
+title: "Legally Blonde"
+filters:
+  - lightbox
+lightbox: auto
+params:
+  abbrev: "LegallyBlonde"
+---
+
+{{< include _clip_info.qmd >}}

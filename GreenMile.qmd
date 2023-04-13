@@ -1,0 +1,10 @@
+---
+title: "The Green Mile"
+filters:
+  - lightbox
+lightbox: auto
+params:
+  abbrev: "GreenMile"
+---
+
+{{< include _clip_info.qmd >}}

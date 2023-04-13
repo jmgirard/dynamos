@@ -1,0 +1,10 @@
+---
+title: "Moonlight"
+filters:
+  - lightbox
+lightbox: auto
+params:
+  abbrev: "Moonlight"
+---
+
+{{< include _clip_info.qmd >}}

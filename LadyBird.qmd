@@ -1,0 +1,10 @@
+---
+title: "Lady Bird"
+filters:
+  - lightbox
+lightbox: auto
+params:
+  abbrev: "LadyBird"
+---
+
+{{< include _clip_info.qmd >}}

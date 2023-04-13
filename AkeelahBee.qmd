@@ -1,0 +1,10 @@
+---
+title: "Akeelah and the Bee"
+filters:
+  - lightbox
+lightbox: auto
+params:
+  abbrev: "AkeelahBee"
+---
+
+{{< include _clip_info.qmd >}}

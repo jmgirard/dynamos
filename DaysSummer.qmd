@@ -1,0 +1,10 @@
+---
+title: "500 Days of Summer"
+filters:
+  - lightbox
+lightbox: auto
+params:
+  abbrev: "DaysSummer"
+---
+
+{{< include _clip_info.qmd >}}

@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.323">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>DynAMoS Database - Catch Me If You Can</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">DynAMoS Database</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./overview.html" rel="" target="">
+ <span class="menu-text">Database Info.</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-movie-clip-info." role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Movie Clip Info.</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-movie-clip-info.">    
+        <li>
+    <a class="dropdown-item" href="./AkeelahBee.html" rel="" target="">
+ <span class="dropdown-text">[AkeelahBee] Akeelah and the Bee</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./BealeStreet.html" rel="" target="">
+ <span class="dropdown-text">[BealeStreet] If Beale Street Could Talk</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./CatchMe.html" rel="" target="">
+ <span class="dropdown-text">[CatchMe] Catch Me If You Can</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./DaysSummer.html" rel="" target="">
+ <span class="dropdown-text">[DaysSummer] 500 Days of Summer</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Fences.html" rel="" target="">
+ <span class="dropdown-text">[Fences] Fences</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ForrestGump.html" rel="" target="">
+ <span class="dropdown-text">[ForrestGump] Forrest Gump</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./GoodWill.html" rel="" target="">
+ <span class="dropdown-text">[GoodWill] Good Will Hunting</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./GreenMile.html" rel="" target="">
+ <span class="dropdown-text">[GreenMile] The Green Mile</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./KingsSpeech.html" rel="" target="">
+ <span class="dropdown-text">[KingsSpeech] The King’s Speech</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./LadyBird.html" rel="" target="">
+ <span class="dropdown-text">[LadyBird] Lady Bird</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./LegallyBlonde.html" rel="" target="">
+ <span class="dropdown-text">[LegallyBlonde] Legally Blonde</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./LittleMiss.html" rel="" target="">
+ <span class="dropdown-text">[LittleMiss] Little Miss Sunshine</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./MarriageStory.html" rel="" target="">
+ <span class="dropdown-text">[MarriageStory] Marriage Story</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Miracle.html" rel="" target="">
+ <span class="dropdown-text">[Miracle] Miracle</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Moonlight.html" rel="" target="">
+ <span class="dropdown-text">[Moonlight] Moonlight</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./NoCountry.html" rel="" target="">
+ <span class="dropdown-text">[NoCountry] No Country for Old Men</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ParentTrap.html" rel="" target="">
+ <span class="dropdown-text">[ParentTrap] The Parent Trap</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./PursuitHappyness.html" rel="" target="">
+ <span class="dropdown-text">[PursuitHappyness] The Pursuit of Happyness</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./SilenceLambs.html" rel="" target="">
+ <span class="dropdown-text">[SilenceLambs] The Silence of the Lambs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./SocialNetwork.html" rel="" target="">
+ <span class="dropdown-text">[SocialNetwork] The Social Network</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Zodiac.html" rel="" target="">
+ <span class="dropdown-text">[Zodiac] Zodiac</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Request Access</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#film-information" id="toc-film-information" class="nav-link active" data-scroll-target="#film-information">Film Information</a></li>
+  <li><a href="#clip-information" id="toc-clip-information" class="nav-link" data-scroll-target="#clip-information">Clip Information</a></li>
+  <li><a href="#subtitles" id="toc-subtitles" class="nav-link" data-scroll-target="#subtitles">Subtitles</a></li>
+  <li><a href="#holistic-ratings" id="toc-holistic-ratings" class="nav-link" data-scroll-target="#holistic-ratings">Holistic Ratings</a></li>
+  <li><a href="#dynamic-ratings" id="toc-dynamic-ratings" class="nav-link" data-scroll-target="#dynamic-ratings">Dynamic Ratings</a>
+  <ul class="collapse">
+  <li><a href="#chromodoris-plot" id="toc-chromodoris-plot" class="nav-link" data-scroll-target="#chromodoris-plot">Chromodoris Plot</a></li>
+  <li><a href="#inter-rater-reliability" id="toc-inter-rater-reliability" class="nav-link" data-scroll-target="#inter-rater-reliability">Inter-Rater Reliability</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Catch Me If You Can</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="film-information" class="level2">
+<h2 class="anchored" data-anchor-id="film-information">Film Information</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<strong><em>Catch Me If You Can</em></strong> is a 2002 American biographical crime comedy-drama film directed and produced by Steven Spielberg and starring Leonardo DiCaprio and Tom Hanks with Christopher Walken, Martin Sheen, Nathalie Baye, Amy Adams and James Brolin in supporting roles. The screenplay by Jeff Nathanson is based on the “autobiography” of Frank Abagnale, who claims that before his 19th birthday, he successfully performed cons worth millions of dollars by posing as a Pan American World Airways pilot, a Georgia doctor, and a Louisiana parish prosecutor. The truth of his story is questionable.
+<p>
+</p><blockquote class="blockquote">
+All information in this section came from <a href="https://en.wikipedia.org/wiki/Catch_Me_If_You_Can">Wikipedia</a>.
+</blockquote>
+<p></p>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column poster" style="width:20%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./img/posters/CatchMe_poster.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="./img/posters/CatchMe_poster.webp" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="clip-information" class="level2">
+<h2 class="anchored" data-anchor-id="clip-information">Clip Information</h2>
+<p>Frank, a young airline pilot, is taking his father out to lunch at a fancy restaurant.</p>
+<div class="cell" data-hash="CatchMe_cache/html/info_417e14e25c0780cb1b9b62c8de121974">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Abbrev</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Film</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Clip Start</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Clip Stop</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">CatchMe</td>
+<td style="text-align: left;">Catch Me If You Can (2002)</td>
+<td style="text-align: left;">00:44:32.250</td>
+<td style="text-align: left;">00:49:06.050</td>
+<td style="text-align: right;">274</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<div class="cell" data-hash="CatchMe_cache/html/mediainfo_dd3d4c62e9c28e61f19656506b865539">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Characteristic</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Format</td>
+<td style="text-align: left;">MPEG-4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">File Size</td>
+<td style="text-align: left;">126.2 MiB</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Duration</td>
+<td style="text-align: left;">273.816</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Frame Rate</td>
+<td style="text-align: left;">23.976</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Video Width</td>
+<td style="text-align: left;">1920</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Video Height</td>
+<td style="text-align: left;">1040</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Video BitRate</td>
+<td style="text-align: left;">3.5 MB/s</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Audio Channels</td>
+<td style="text-align: left;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Audio SamplingRate</td>
+<td style="text-align: left;">48000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Audio BitRate</td>
+<td style="text-align: left;">394.3 kB/s</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col">
+<img src="./img/screenshots/CatchMe_01.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/CatchMe_02.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/CatchMe_03.webp" class="lightbox">
+</div>
+</div>
+<div class="row">
+<div class="col">
+<img src="./img/screenshots/CatchMe_04.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/CatchMe_05.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/CatchMe_06.webp" class="lightbox">
+</div>
+</div>
+<div class="row">
+<div class="col">
+<img src="./img/screenshots/CatchMe_07.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/CatchMe_08.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/CatchMe_09.webp" class="lightbox">
+</div>
+</div>
+<div class="row">
+<div class="col">
+<img src="./img/screenshots/CatchMe_10.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/CatchMe_11.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/CatchMe_12.webp" class="lightbox">
+</div>
+</div>
+</div>
+</section>
+<section id="subtitles" class="level2">
+<h2 class="anchored" data-anchor-id="subtitles">Subtitles</h2>
+<p>The following wordcloud shows the words used in this clip, scaled by number of occurrences and colored by sentiment (orange = negative, green = positive, grey = neutral or unsure). Note that the words have been stemmed and lemmatized and stopwords have been removed.</p>
+<div class="cell" data-hash="CatchMe_cache/html/wordcloud_d4b45a95d078933b971662c817939b24">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="CatchMe_files/figure-html/wordcloud-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="CatchMe_files/figure-html/wordcloud-1.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The table below shows all subtitles in this clip with the start and stop time of each subtitle’s appearance in seconds.</p>
+<div class="cell" data-hash="CatchMe_cache/html/subtitle_df_d1bc6cb6d3e228a825f2d92c12945357">
+<div class="cell-output-display">
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:300px; ">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">Start</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">End</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">Subtitle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.383</td>
+<td style="text-align: right;">6.054</td>
+<td style="text-align: left;">(THREE-PIECE COMBO PLAYS SOFT JAZZ)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6.055</td>
+<td style="text-align: right;">7.389</td>
+<td style="text-align: left;">Daddy!</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7.390</td>
+<td style="text-align: right;">8.791</td>
+<td style="text-align: left;">(CHUCKLING)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10.193</td>
+<td style="text-align: right;">12.194</td>
+<td style="text-align: left;">My son, the birdman.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">12.195</td>
+<td style="text-align: right;">13.229</td>
+<td style="text-align: left;">Some uniform, Frank.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">13.230</td>
+<td style="text-align: right;">15.231</td>
+<td style="text-align: left;">What do you think?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">15.232</td>
+<td style="text-align: right;">16.898</td>
+<td style="text-align: left;">Nice.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">16.899</td>
+<td style="text-align: right;">18.567</td>
+<td style="text-align: left;">Sit down.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">18.568</td>
+<td style="text-align: right;">20.168</td>
+<td style="text-align: left;">(CLEARS THROAT)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">21.571</td>
+<td style="text-align: right;">23.739</td>
+<td style="text-align: left;">So, Dad... Daddy, have you gotten the postcards?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">23.740</td>
+<td style="text-align: right;">25.073</td>
+<td style="text-align: left;">Of course.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">25.074</td>
+<td style="text-align: right;">27.376</td>
+<td style="text-align: left;">This fork is ice cold.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">27.377</td>
+<td style="text-align: right;">31.046</td>
+<td style="text-align: left;">No, no, Dad, th-that's a chilled salad fork.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">31.047</td>
+<td style="text-align: right;">35.717</td>
+<td style="text-align: left;">(WHISPERING) It's a fancy restaurant, you know.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">35.718</td>
+<td style="text-align: right;">39.087</td>
+<td style="text-align: left;">(SIGHING)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">39.088</td>
+<td style="text-align: right;">41.524</td>
+<td style="text-align: left;">Well, here...</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">41.525</td>
+<td style="text-align: right;">43.459</td>
+<td style="text-align: left;">I-I got you something.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">43.460</td>
+<td style="text-align: right;">45.194</td>
+<td style="text-align: left;">What's that?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">45.195</td>
+<td style="text-align: right;">47.396</td>
+<td style="text-align: left;">Open it.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">51.201</td>
+<td style="text-align: right;">53.035</td>
+<td style="text-align: left;">You know what those are, right?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">53.036</td>
+<td style="text-align: right;">55.037</td>
+<td style="text-align: left;">Those are the keys</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">55.038</td>
+<td style="text-align: right;">58.040</td>
+<td style="text-align: left;">to a 1965 Cadillac DeVille convertible.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">58.041</td>
+<td style="text-align: right;">59.942</td>
+<td style="text-align: left;">Brand-new, Dad.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">59.943</td>
+<td style="text-align: right;">62.879</td>
+<td style="text-align: left;">Red with white interior</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">62.880</td>
+<td style="text-align: right;">67.049</td>
+<td style="text-align: left;">split seats, air conditioning, the works.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">67.050</td>
+<td style="text-align: right;">68.317</td>
+<td style="text-align: left;">Are you giving me a Cadillac?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">68.318</td>
+<td style="text-align: right;">70.052</td>
+<td style="text-align: left;">Yeah. I'm giving you a Cadillac.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">70.053</td>
+<td style="text-align: right;">71.821</td>
+<td style="text-align: left;">Dad, sh-she's parked downstairs.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">71.822</td>
+<td style="text-align: right;">73.389</td>
+<td style="text-align: left;">When we're done eating lunch</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">73.390</td>
+<td style="text-align: right;">76.291</td>
+<td style="text-align: left;">why don't you, you know, drive on over to Mom's house</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">76.292</td>
+<td style="text-align: right;">78.460</td>
+<td style="text-align: left;">pick her up, take a little joyride?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">78.461</td>
+<td style="text-align: right;">80.262</td>
+<td style="text-align: left;">Do you know what would happen</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">80.263</td>
+<td style="text-align: right;">81.564</td>
+<td style="text-align: left;">if the IRS found out</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">81.565</td>
+<td style="text-align: right;">85.067</td>
+<td style="text-align: left;">I was driving around in a new coupe?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">85.068</td>
+<td style="text-align: right;">87.369</td>
+<td style="text-align: left;">I took the train here, Frank.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">87.370</td>
+<td style="text-align: right;">89.739</td>
+<td style="text-align: left;">I'm taking the train home.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">91.408</td>
+<td style="text-align: right;">93.442</td>
+<td style="text-align: left;">All right.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">98.448</td>
+<td style="text-align: right;">101.551</td>
+<td style="text-align: left;">I have plenty of money.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">101.552</td>
+<td style="text-align: right;">103.953</td>
+<td style="text-align: left;">You know, if you ever, ever need anything...</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">103.954</td>
+<td style="text-align: right;">105.287</td>
+<td style="text-align: left;">You worried?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">105.288</td>
+<td style="text-align: right;">107.823</td>
+<td style="text-align: left;">About me?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">107.824</td>
+<td style="text-align: right;">109.458</td>
+<td style="text-align: left;">No, I'm not... I'm not worried.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">109.459</td>
+<td style="text-align: right;">111.895</td>
+<td style="text-align: left;">You think I can't buy my own car?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">111.896</td>
+<td style="text-align: right;">116.465</td>
+<td style="text-align: left;">Two mice fell in a bucket of cream, Frank.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">116.466</td>
+<td style="text-align: right;">118.333</td>
+<td style="text-align: left;">Which one am I?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">118.334</td>
+<td style="text-align: right;">121.203</td>
+<td style="text-align: left;">You're that second mouse.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">122.839</td>
+<td style="text-align: right;">126.475</td>
+<td style="text-align: left;">I went by the store today.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">126.476</td>
+<td style="text-align: right;">128.444</td>
+<td style="text-align: left;">I had to close the store for awhile.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">128.445</td>
+<td style="text-align: right;">130.012</td>
+<td style="text-align: left;">It's all about timing, Frank.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">130.013</td>
+<td style="text-align: right;">131.614</td>
+<td style="text-align: left;">The goddamn government knows that.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">131.615</td>
+<td style="text-align: right;">133.215</td>
+<td style="text-align: left;">They hit you when you're down.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">133.216</td>
+<td style="text-align: right;">134.584</td>
+<td style="text-align: left;">I wasn't going to let them</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">134.585</td>
+<td style="text-align: right;">136.151</td>
+<td style="text-align: left;">take it from me, so I just...</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">136.152</td>
+<td style="text-align: right;">139.255</td>
+<td style="text-align: left;">shut the doors myself, called their bluff.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">143.827</td>
+<td style="text-align: right;">145.995</td>
+<td style="text-align: left;">Sooner or later, they'll forget about me.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">145.996</td>
+<td style="text-align: right;">148.430</td>
+<td style="text-align: left;">I understand, I...</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">148.431</td>
+<td style="text-align: right;">151.834</td>
+<td style="text-align: left;">Have you told Ma?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">153.503</td>
+<td style="text-align: right;">158.040</td>
+<td style="text-align: left;">She's so stubborn, your mother.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">160.677</td>
+<td style="text-align: right;">162.011</td>
+<td style="text-align: left;">Don't worry.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">162.012</td>
+<td style="text-align: right;">164.379</td>
+<td style="text-align: left;">I'm not going to let her go without a fight.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">164.380</td>
+<td style="text-align: right;">165.615</td>
+<td style="text-align: left;">I been fighting for us...</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">165.616</td>
+<td style="text-align: right;">167.249</td>
+<td style="text-align: left;">(GASPS QUIETLY)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">168.351</td>
+<td style="text-align: right;">170.052</td>
+<td style="text-align: left;">Dad?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">172.188</td>
+<td style="text-align: right;">174.790</td>
+<td style="text-align: left;">Since the day we... we met.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">174.791</td>
+<td style="text-align: right;">176.659</td>
+<td style="text-align: left;">Daddy, out of all those men</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">176.660</td>
+<td style="text-align: right;">180.129</td>
+<td style="text-align: left;">you were the one that took her home, remember that.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">180.130</td>
+<td style="text-align: right;">183.565</td>
+<td style="text-align: left;">200 men, sitting in that tiny social hall</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">183.566</td>
+<td style="text-align: right;">185.767</td>
+<td style="text-align: left;">watching her dance.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">188.038</td>
+<td style="text-align: right;">190.539</td>
+<td style="text-align: left;">What was the name of that town?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">190.540</td>
+<td style="text-align: right;">191.874</td>
+<td style="text-align: left;">Montrichard, Dad.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">191.875</td>
+<td style="text-align: right;">193.375</td>
+<td style="text-align: left;">Yeah.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">193.376</td>
+<td style="text-align: right;">196.211</td>
+<td style="text-align: left;">I didn't speak a word of French</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">196.212</td>
+<td style="text-align: right;">199.682</td>
+<td style="text-align: left;">and six weeks later, she was my wi...</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">199.683</td>
+<td style="text-align: right;">202.685</td>
+<td style="text-align: left;">She's your wife.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">202.686</td>
+<td style="text-align: right;">206.956</td>
+<td style="text-align: left;">My son bought me a Cadillac today.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">206.957</td>
+<td style="text-align: right;">210.993</td>
+<td style="text-align: left;">I think that calls for a toast.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">210.994</td>
+<td style="text-align: right;">212.527</td>
+<td style="text-align: left;">(SOFT JAZZ PLAYING)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">215.498</td>
+<td style="text-align: right;">218.567</td>
+<td style="text-align: left;">(INHALING DEEPLY)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">218.568</td>
+<td style="text-align: right;">221.904</td>
+<td style="text-align: left;">To the best damn pilot in the sky.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">221.905</td>
+<td style="text-align: right;">223.605</td>
+<td style="text-align: left;">It's not what you think.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">223.606</td>
+<td style="text-align: right;">226.275</td>
+<td style="text-align: left;">I'm just a copilot.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">226.276</td>
+<td style="text-align: right;">229.945</td>
+<td style="text-align: left;">You see these people staring at you?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">233.083</td>
+<td style="text-align: right;">234.917</td>
+<td style="text-align: left;">These are the most powerful people</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">234.918</td>
+<td style="text-align: right;">236.552</td>
+<td style="text-align: left;">in New York City</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">236.553</td>
+<td style="text-align: right;">238.821</td>
+<td style="text-align: left;">and they keep peeking over their shoulders</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">238.822</td>
+<td style="text-align: right;">240.823</td>
+<td style="text-align: left;">wondering where you're going tonight.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">240.824</td>
+<td style="text-align: right;">242.291</td>
+<td style="text-align: left;">Where you going, Frank?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">242.292</td>
+<td style="text-align: right;">245.995</td>
+<td style="text-align: left;">Dad, nobody's staring at me.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">245.996</td>
+<td style="text-align: right;">248.364</td>
+<td style="text-align: left;">Some place exotic?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">250.266</td>
+<td style="text-align: right;">253.102</td>
+<td style="text-align: left;">Just tell me where you're going.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">254.637</td>
+<td style="text-align: right;">257.006</td>
+<td style="text-align: left;">Los An... Hollywood.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">257.007</td>
+<td style="text-align: right;">259.674</td>
+<td style="text-align: left;">Hollywood.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">261.611</td>
+<td style="text-align: right;">264.446</td>
+<td style="text-align: left;">(SNIFFLES)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">264.447</td>
+<td style="text-align: right;">266.615</td>
+<td style="text-align: left;">(WHISPERING) The rest of us...</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">266.616</td>
+<td style="text-align: right;">269.484</td>
+<td style="text-align: left;">really are suckers.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+</div>
+</section>
+<section id="holistic-ratings" class="level2">
+<h2 class="anchored" data-anchor-id="holistic-ratings">Holistic Ratings</h2>
+<p>A total of 79 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five Positive Affect items (i.e., <em>alert</em>, <em>determined</em>, <em>enthusiastic</em>, <em>excited</em>, <em>inspired</em>) and five Negative Affect items (i.e., <em>afraid</em>, <em>distressed</em>, <em>nervous</em>, <em>scared</em>, <em>upset</em>), each rated on an ordinal scale from 0 to 4. The plot below shows the distribution of scale scores (boxplot plus individual ratings).</p>
+<div class="cell" data-hash="CatchMe_cache/html/holistic_plot_74f2937b1043df44122774e0e1af088b">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="CatchMe_files/figure-html/holistic_plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="CatchMe_files/figure-html/holistic_plot-1.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="dynamic-ratings" class="level2">
+<h2 class="anchored" data-anchor-id="dynamic-ratings">Dynamic Ratings</h2>
+<p>A total of 79 participants watched this film clip and used the <a href="https://carma.jmgirard.com">CARMA software</a> to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional <em>valence</em> scale ranging from -4 (very negative) to 4 (very positive).</p>
+<section id="chromodoris-plot" class="level3">
+<h3 class="anchored" data-anchor-id="chromodoris-plot">Chromodoris Plot</h3>
+<p>We can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.</p>
+<div class="cell" data-hash="CatchMe_cache/html/valence_plot_644cf6b0defb4a1f6467675fc37b575d">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="CatchMe_files/figure-html/valence_plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="CatchMe_files/figure-html/valence_plot-1.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="inter-rater-reliability" class="level3">
+<h3 class="anchored" data-anchor-id="inter-rater-reliability">Inter-Rater Reliability</h3>
+<p>A Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). The lower and upper columns in the table below represent the boundaries of the 95% equal-tail credible interval. Note that we dropped the first 10 seconds of each clip (as rater “warmup” time).</p>
+<div class="cell" data-hash="CatchMe_cache/html/var_summary_27222e6f75cffbb08f45d786e713687b">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Component</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Term</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Estimate</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Lower</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Upper</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Rater</td>
+<td style="text-align: left;">Variance</td>
+<td style="text-align: right;">0.500</td>
+<td style="text-align: right;">0.384</td>
+<td style="text-align: right;">0.720</td>
+<td style="text-align: right;">0.224</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Timepoint</td>
+<td style="text-align: left;">Variance</td>
+<td style="text-align: right;">0.700</td>
+<td style="text-align: right;">0.597</td>
+<td style="text-align: right;">0.851</td>
+<td style="text-align: right;">0.314</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Residual</td>
+<td style="text-align: left;">Variance</td>
+<td style="text-align: right;">1.028</td>
+<td style="text-align: right;">1.006</td>
+<td style="text-align: right;">1.046</td>
+<td style="text-align: right;">0.461</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>From these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k).</p>
+<div class="cell" data-hash="CatchMe_cache/html/icc_summary_2845ac475f701531291fc839749be1f2">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Term</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Estimate</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Lower</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Upper</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Raters</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Error</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ICC(C,k)</td>
+<td style="text-align: right;">0.982</td>
+<td style="text-align: right;">0.979</td>
+<td style="text-align: right;">0.985</td>
+<td style="text-align: right;">79</td>
+<td style="text-align: left;">Relative</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>Below, we can also visualize the posterior distributions of each of these parameters. Values with higher posterior density are more probable.</p>
+<div class="cell" data-hash="CatchMe_cache/html/icc_plot_7d3550ba894b31e6112ab94dc6abbbd8">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="CatchMe_files/figure-html/icc_plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="CatchMe_files/figure-html/icc_plot-1.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":true,"descPosition":"bottom","openEffect":"zoom"});</script>
+
+
+
+</body></html>

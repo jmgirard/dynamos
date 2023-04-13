@@ -1,0 +1,10 @@
+---
+title: "Pulp Fiction"
+filters:
+  - lightbox
+lightbox: auto
+params:
+  abbrev: "PulpFiction"
+---
+
+{{< include _clip_info.qmd >}}

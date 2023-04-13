@@ -1,0 +1,10 @@
+---
+title: "No Country for Old Men"
+filters:
+  - lightbox
+lightbox: auto
+params:
+  abbrev: "NoCountry"
+---
+
+{{< include _clip_info.qmd >}}

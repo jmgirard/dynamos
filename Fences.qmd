@@ -1,0 +1,10 @@
+---
+title: "Fences"
+filters:
+  - lightbox
+lightbox: auto
+params:
+  abbrev: "Fences"
+---
+
+{{< include _clip_info.qmd >}}

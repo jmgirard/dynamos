@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.323">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>DynAMoS Database - The Green Mile</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">DynAMoS Database</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./overview.html" rel="" target="">
+ <span class="menu-text">Database Info.</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-movie-clip-info." role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Movie Clip Info.</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-movie-clip-info.">    
+        <li>
+    <a class="dropdown-item" href="./AkeelahBee.html" rel="" target="">
+ <span class="dropdown-text">[AkeelahBee] Akeelah and the Bee</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./BealeStreet.html" rel="" target="">
+ <span class="dropdown-text">[BealeStreet] If Beale Street Could Talk</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./CatchMe.html" rel="" target="">
+ <span class="dropdown-text">[CatchMe] Catch Me If You Can</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./DaysSummer.html" rel="" target="">
+ <span class="dropdown-text">[DaysSummer] 500 Days of Summer</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Fences.html" rel="" target="">
+ <span class="dropdown-text">[Fences] Fences</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ForrestGump.html" rel="" target="">
+ <span class="dropdown-text">[ForrestGump] Forrest Gump</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./GoodWill.html" rel="" target="">
+ <span class="dropdown-text">[GoodWill] Good Will Hunting</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./GreenMile.html" rel="" target="">
+ <span class="dropdown-text">[GreenMile] The Green Mile</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./KingsSpeech.html" rel="" target="">
+ <span class="dropdown-text">[KingsSpeech] The King’s Speech</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./LadyBird.html" rel="" target="">
+ <span class="dropdown-text">[LadyBird] Lady Bird</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./LegallyBlonde.html" rel="" target="">
+ <span class="dropdown-text">[LegallyBlonde] Legally Blonde</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./LittleMiss.html" rel="" target="">
+ <span class="dropdown-text">[LittleMiss] Little Miss Sunshine</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./MarriageStory.html" rel="" target="">
+ <span class="dropdown-text">[MarriageStory] Marriage Story</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Miracle.html" rel="" target="">
+ <span class="dropdown-text">[Miracle] Miracle</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Moonlight.html" rel="" target="">
+ <span class="dropdown-text">[Moonlight] Moonlight</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./NoCountry.html" rel="" target="">
+ <span class="dropdown-text">[NoCountry] No Country for Old Men</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ParentTrap.html" rel="" target="">
+ <span class="dropdown-text">[ParentTrap] The Parent Trap</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./PursuitHappyness.html" rel="" target="">
+ <span class="dropdown-text">[PursuitHappyness] The Pursuit of Happyness</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./SilenceLambs.html" rel="" target="">
+ <span class="dropdown-text">[SilenceLambs] The Silence of the Lambs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./SocialNetwork.html" rel="" target="">
+ <span class="dropdown-text">[SocialNetwork] The Social Network</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Zodiac.html" rel="" target="">
+ <span class="dropdown-text">[Zodiac] Zodiac</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Request Access</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#film-information" id="toc-film-information" class="nav-link active" data-scroll-target="#film-information">Film Information</a></li>
+  <li><a href="#clip-information" id="toc-clip-information" class="nav-link" data-scroll-target="#clip-information">Clip Information</a></li>
+  <li><a href="#subtitles" id="toc-subtitles" class="nav-link" data-scroll-target="#subtitles">Subtitles</a></li>
+  <li><a href="#holistic-ratings" id="toc-holistic-ratings" class="nav-link" data-scroll-target="#holistic-ratings">Holistic Ratings</a></li>
+  <li><a href="#dynamic-ratings" id="toc-dynamic-ratings" class="nav-link" data-scroll-target="#dynamic-ratings">Dynamic Ratings</a>
+  <ul class="collapse">
+  <li><a href="#chromodoris-plot" id="toc-chromodoris-plot" class="nav-link" data-scroll-target="#chromodoris-plot">Chromodoris Plot</a></li>
+  <li><a href="#inter-rater-reliability" id="toc-inter-rater-reliability" class="nav-link" data-scroll-target="#inter-rater-reliability">Inter-Rater Reliability</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The Green Mile</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="film-information" class="level2">
+<h2 class="anchored" data-anchor-id="film-information">Film Information</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<strong><em>The Green Mile</em></strong> is a 1999 American fantasy drama film written and directed by Frank Darabont and based on Stephen King’s 1996 novel of the same name. It stars Tom Hanks as a death row prison guard during the Great Depression who witnesses supernatural events following the arrival of an enigmatic convict (Michael Clarke Duncan) at his facility. David Morse, Bonnie Hunt, Sam Rockwell, and James Cromwell appear in supporting roles.
+<p>
+</p><blockquote class="blockquote">
+All information in this section came from <a href="https://en.wikipedia.org/wiki/The_Green_Mile_(film)">Wikipedia</a>.
+</blockquote>
+<p></p>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column poster" style="width:20%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./img/posters/GreenMile_poster.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="./img/posters/GreenMile_poster.webp" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="clip-information" class="level2">
+<h2 class="anchored" data-anchor-id="clip-information">Clip Information</h2>
+<p>John Coffey, a prisoner on death row, is executed via electric chair. The prison guards watching have come to know John and know that he did not commit the crimes he is being executed for.</p>
+<div class="cell" data-hash="GreenMile_cache/html/info_d17a02abf6d747cd2b9dc3c0bd3d119f">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Abbrev</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Film</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Clip Start</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Clip Stop</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">GreenMile</td>
+<td style="text-align: left;">The Green Mile (1999)</td>
+<td style="text-align: left;">02:47:40.700</td>
+<td style="text-align: left;">02:51:39.700</td>
+<td style="text-align: right;">239</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<div class="cell" data-hash="GreenMile_cache/html/mediainfo_ebdc628e4ef3d56f5b01ea705deb2e8a">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Characteristic</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Format</td>
+<td style="text-align: left;">MPEG-4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">File Size</td>
+<td style="text-align: left;">50.5 MiB</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Duration</td>
+<td style="text-align: left;">239.031</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Frame Rate</td>
+<td style="text-align: left;">23.976</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Video Width</td>
+<td style="text-align: left;">1920</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Video Height</td>
+<td style="text-align: left;">1072</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Video BitRate</td>
+<td style="text-align: left;">1.6 MB/s</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Audio Channels</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Audio SamplingRate</td>
+<td style="text-align: left;">48000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Audio BitRate</td>
+<td style="text-align: left;">129.2 kB/s</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col">
+<img src="./img/screenshots/GreenMile_01.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/GreenMile_02.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/GreenMile_03.webp" class="lightbox">
+</div>
+</div>
+<div class="row">
+<div class="col">
+<img src="./img/screenshots/GreenMile_04.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/GreenMile_05.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/GreenMile_06.webp" class="lightbox">
+</div>
+</div>
+<div class="row">
+<div class="col">
+<img src="./img/screenshots/GreenMile_07.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/GreenMile_08.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/GreenMile_09.webp" class="lightbox">
+</div>
+</div>
+<div class="row">
+<div class="col">
+<img src="./img/screenshots/GreenMile_10.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/GreenMile_11.webp" class="lightbox">
+</div>
+<div class="col">
+<img src="./img/screenshots/GreenMile_12.webp" class="lightbox">
+</div>
+</div>
+</div>
+</section>
+<section id="subtitles" class="level2">
+<h2 class="anchored" data-anchor-id="subtitles">Subtitles</h2>
+<p>The following wordcloud shows the words used in this clip, scaled by number of occurrences and colored by sentiment (orange = negative, green = positive, grey = neutral or unsure). Note that the words have been stemmed and lemmatized and stopwords have been removed.</p>
+<div class="cell" data-hash="GreenMile_cache/html/wordcloud_e9300ebba666c2a562855534cfc71d6a">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="GreenMile_files/figure-html/wordcloud-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="GreenMile_files/figure-html/wordcloud-1.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The table below shows all subtitles in this clip with the start and stop time of each subtitle’s appearance in seconds.</p>
+<div class="cell" data-hash="GreenMile_cache/html/subtitle_df_b0393bcbf606063e2def0b5cc28f558d">
+<div class="cell-output-display">
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:300px; ">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">Start</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">End</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">Subtitle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">5.773</td>
+<td style="text-align: right;">9.275</td>
+<td style="text-align: left;">MARJORIE: Does it hurt yet? I hope it does.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10.110</td>
+<td style="text-align: right;">12.362</td>
+<td style="text-align: left;">I hope it hurts like hell.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">14.281</td>
+<td style="text-align: right;">18.368</td>
+<td style="text-align: left;">John Coffey, you've been condemned to die in the chair by a jury of your peers.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">18.619</td>
+<td style="text-align: right;">22.163</td>
+<td style="text-align: left;">Sentence imposed by a judge in good standing in this state.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">22.456</td>
+<td style="text-align: right;">25.708</td>
+<td style="text-align: left;">Do you have anything to say before sentence is carried out?</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">27.461</td>
+<td style="text-align: right;">29.962</td>
+<td style="text-align: left;">I'm sorry for what I am.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">41.975</td>
+<td style="text-align: right;">43.726</td>
+<td style="text-align: left;">Please, boss...</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">45.145</td>
+<td style="text-align: right;">47.814</td>
+<td style="text-align: left;">...don't put that thing over my face.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">48.982</td>
+<td style="text-align: right;">51.317</td>
+<td style="text-align: left;">Don't put me in the dark.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52.152</td>
+<td style="text-align: right;">54.487</td>
+<td style="text-align: left;">I's afraid of the dark.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">64.164</td>
+<td style="text-align: right;">65.832</td>
+<td style="text-align: left;">All right, John.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">86.019</td>
+<td style="text-align: right;">89.021</td>
+<td style="text-align: left;">[SOFTLY] Heaven, I'm in heaven</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">89.231</td>
+<td style="text-align: right;">92.024</td>
+<td style="text-align: left;">Heaven, heaven</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">92.276</td>
+<td style="text-align: right;">94.110</td>
+<td style="text-align: left;">I'm in heaven</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">94.695</td>
+<td style="text-align: right;">97.280</td>
+<td style="text-align: left;">Heaven, heaven</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">97.531</td>
+<td style="text-align: right;">99.240</td>
+<td style="text-align: left;">I'm in heaven</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">120.137</td>
+<td style="text-align: right;">121.762</td>
+<td style="text-align: left;">John Coffey...</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">122.764</td>
+<td style="text-align: right;">125.892</td>
+<td style="text-align: left;">...electricity shall pass through your body until you are dead...</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">126.059</td>
+<td style="text-align: right;">128.269</td>
+<td style="text-align: left;">...in accordance with state law.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">130.647</td>
+<td style="text-align: right;">134.400</td>
+<td style="text-align: left;">May God have mercy on your soul.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">168.727</td>
+<td style="text-align: right;">169.936</td>
+<td style="text-align: left;">Paul.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">173.106</td>
+<td style="text-align: right;">175.024</td>
+<td style="text-align: left;">You have to say it.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">176.693</td>
+<td style="text-align: right;">178.945</td>
+<td style="text-align: left;">You have to give the order.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">196.964</td>
+<td style="text-align: right;">199.298</td>
+<td style="text-align: left;">COFFEY'S VOICE: He killed them with they love.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">199.466</td>
+<td style="text-align: right;">204.345</td>
+<td style="text-align: left;">That's how it is every day all over the world.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">218.151</td>
+<td style="text-align: right;">219.569</td>
+<td style="text-align: left;">Roll on two.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">221.154</td>
+<td style="text-align: right;">223.739</td>
+<td style="text-align: left;">[ELECTRICITY HUMMING]</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+</div>
+</section>
+<section id="holistic-ratings" class="level2">
+<h2 class="anchored" data-anchor-id="holistic-ratings">Holistic Ratings</h2>
+<p>A total of 76 participants watched this film clip and then provided holistic ratings on how the entire clip made them feel. These holistic ratings were completed using five Positive Affect items (i.e., <em>alert</em>, <em>determined</em>, <em>enthusiastic</em>, <em>excited</em>, <em>inspired</em>) and five Negative Affect items (i.e., <em>afraid</em>, <em>distressed</em>, <em>nervous</em>, <em>scared</em>, <em>upset</em>), each rated on an ordinal scale from 0 to 4. The plot below shows the distribution of scale scores (boxplot plus individual ratings).</p>
+<div class="cell" data-hash="GreenMile_cache/html/holistic_plot_5b37f16c1c9f59dd2895fc7bfc173f58">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="GreenMile_files/figure-html/holistic_plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="GreenMile_files/figure-html/holistic_plot-1.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="dynamic-ratings" class="level2">
+<h2 class="anchored" data-anchor-id="dynamic-ratings">Dynamic Ratings</h2>
+<p>A total of 75 participants watched this film clip and used the <a href="https://carma.jmgirard.com">CARMA software</a> to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional <em>valence</em> scale ranging from -4 (very negative) to 4 (very positive).</p>
+<section id="chromodoris-plot" class="level3">
+<h3 class="anchored" data-anchor-id="chromodoris-plot">Chromodoris Plot</h3>
+<p>We can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.</p>
+<div class="cell" data-hash="GreenMile_cache/html/valence_plot_2c31700c93f878f67b3a522766f8be6f">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="GreenMile_files/figure-html/valence_plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="GreenMile_files/figure-html/valence_plot-1.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="inter-rater-reliability" class="level3">
+<h3 class="anchored" data-anchor-id="inter-rater-reliability">Inter-Rater Reliability</h3>
+<p>A Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). The lower and upper columns in the table below represent the boundaries of the 95% equal-tail credible interval. Note that we dropped the first 10 seconds of each clip (as rater “warmup” time).</p>
+<div class="cell" data-hash="GreenMile_cache/html/var_summary_b46396cba8b39d9bfdb18528cf12c60e">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Component</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Term</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Estimate</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Lower</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Upper</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Rater</td>
+<td style="text-align: left;">Variance</td>
+<td style="text-align: right;">0.974</td>
+<td style="text-align: right;">0.742</td>
+<td style="text-align: right;">1.422</td>
+<td style="text-align: right;">0.455</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Timepoint</td>
+<td style="text-align: left;">Variance</td>
+<td style="text-align: right;">0.236</td>
+<td style="text-align: right;">0.200</td>
+<td style="text-align: right;">0.295</td>
+<td style="text-align: right;">0.110</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Residual</td>
+<td style="text-align: left;">Variance</td>
+<td style="text-align: right;">0.930</td>
+<td style="text-align: right;">0.910</td>
+<td style="text-align: right;">0.950</td>
+<td style="text-align: right;">0.435</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>From these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k).</p>
+<div class="cell" data-hash="GreenMile_cache/html/icc_summary_f071c1c1d9fe31ec8c15b5822b87dce1">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Term</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Estimate</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Lower</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Upper</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Raters</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Error</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ICC(C,k)</td>
+<td style="text-align: right;">0.951</td>
+<td style="text-align: right;">0.942</td>
+<td style="text-align: right;">0.96</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: left;">Relative</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>Below, we can also visualize the posterior distributions of each of these parameters. Values with higher posterior density are more probable.</p>
+<div class="cell" data-hash="GreenMile_cache/html/icc_plot_45e0c66f88bc1314e446196de6a3cc96">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="GreenMile_files/figure-html/icc_plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="GreenMile_files/figure-html/icc_plot-1.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":true});</script>
+
+
+
+</body></html>
