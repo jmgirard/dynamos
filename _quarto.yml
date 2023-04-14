@@ -7,6 +7,8 @@ website:
   navbar:
     background: dark
     right:
+      - text: "Database Paper"
+        href: paper.qmd
       - text: "Database Info."
         href: overview.qmd
       - text: "Movie Clip Info."

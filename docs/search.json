@@ -957,5 +957,12 @@
     "title": "Zodiac",
     "section": "Dynamic Ratings",
     "text": "Dynamic Ratings\nA total of 75 participants watched this film clip and used the CARMA software to provide continuous (i.e., second-by-second) ratings of how it made them feel. These continuous ratings were made on a single emotional valence scale ranging from -4 (very negative) to 4 (very positive).\n\nChromodoris Plot\nWe can plot the distribution of all valence ratings per second of the film clip to get a sense of how its emotional tone changes over time. The solid black line represents the mean of all ratings and the yellow, green, and purple ribbons represent the central 50%, 70%, and 90% of the ratings, respectively.\n\n\n\n\n\n\n\n\n\n\n\nInter-Rater Reliability\nA Bayesian generalizability study was used to decompose the variance in ratings of this video clip into the following components: timepoint variance (in average ratings of each second, across raters), rater variance (in average ratings from each rater, across seconds), and residual variance (including second-by-rater interactions and measurement error). The lower and upper columns in the table below represent the boundaries of the 95% equal-tail credible interval. Note that we dropped the first 10 seconds of each clip (as rater “warmup” time).\n\n\n\n\n\nComponent\nTerm\nEstimate\nLower\nUpper\nPercent\n\n\n\n\nRater\nVariance\n0.737\n0.558\n1.051\n0.295\n\n\nTimepoint\nVariance\n1.103\n0.949\n1.311\n0.441\n\n\nResidual\nVariance\n0.660\n0.648\n0.672\n0.264\n\n\n\n\n\n\n\nFrom these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k).\n\n\n\n\n\nTerm\nEstimate\nLower\nUpper\nRaters\nError\n\n\n\n\nICC(C,k)\n0.992\n0.991\n0.993\n75\nRelative\n\n\n\n\n\n\n\nBelow, we can also visualize the posterior distributions of each of these parameters. Values with higher posterior density are more probable."
+  },
+  {
+    "objectID": "paper.html",
+    "href": "paper.html",
+    "title": "Database Paper",
+    "section": "",
+    "text": "Unable to display PDF file. Download instead."
   }
 ]
