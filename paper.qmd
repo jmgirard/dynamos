@@ -2,6 +2,4 @@
 title: "Database Paper"
 ---
 
-<object data="/data/ACII_Submission.pdf" type="application/pdf" width="100%" height="800px">
-  <p>Unable to display PDF file. <a href="/data/ACII_Submission.pdf">Download</a> instead.</p>
-</object>
+{{< pdf data/ACII_Submission.pdf width=100% height=1020 >}}
