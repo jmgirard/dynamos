@@ -269,24 +269,24 @@ create_wordcloud_clip <- function(subtitle_df) {
 
 create_vader_clip <- function(vader_df) {
   vader_df |> 
+    dplyr::mutate(
+      fill = dplyr::case_when(
+        compound < 0 ~ "#d95f02",
+        compound > 0 ~ "#1b9e77",
+        .default = "grey20"
+      )
+    ) |> 
     ggplot2::ggplot(
       ggplot2::aes(
-        x = start, 
-        xend = end, 
-        y = compound, 
-        yend = compound,
-        color = compound
+        xmin = start, 
+        xmax = end, 
+        ymin = 0, 
+        ymax = compound,
+        fill = fill
       )
     ) +
-    ggplot2::geom_segment(linewidth = 3/4) +
-    ggplot2::geom_point(size = 1.5) +
-    ggplot2::scale_color_gradient2(
-      limits = c(-1, 1), 
-      low = "#d95f02", 
-      mid = "grey30", 
-      high = "#1b9e77",
-      guide = NULL
-    ) +
+    ggplot2::geom_rect(color = "black", linewidth = 3/4) +
+    ggplot2::scale_fill_identity() +
     ggplot2::scale_y_continuous(limits = c(-1, 1)) +
     ggplot2::scale_x_continuous(labels = s_to_ts) +
     ggplot2::labs(x = "Timestamp within Clip", y = "Subtitle VADER") +

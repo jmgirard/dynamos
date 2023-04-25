@@ -107,7 +107,7 @@ cat(glue::glue('
 
 ## Subtitles
 
-The following wordcloud shows the words used in this clip, scaled by number of occurrences and colored by sentiment (orange = negative, green = positive, grey = neutral or unsure). Note that the words have been stemmed and lemmatized and stopwords have been removed.
+The following wordcloud shows the words used in this clip, scaled by number of occurrences and colored by sentiment (orange = negative, green = positive, grey = neutral or unsure). The sentiment estimates in this plot are token-based and derived from the Bing lexicon. Note that the words have been stemmed and lemmatized and stopwords have been removed.
 
 ```{r wordcloud}
 #| echo: false
