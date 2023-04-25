@@ -95,6 +95,15 @@ get_subtitle_df <- function(abbrev) {
   df
 }
 
+# Get clip-specific vader tibble ------------------------------------------
+
+get_vader_df <- function(abbrev) {
+  df <- readr::read_rds("./data/vader_tidy.rds")
+  if (!missing(abbrev)) {
+    df <- df |> dplyr::filter(Abbrev == abbrev)
+  }
+  df
+}
 
 # Create clip-specific holistic ratings plot ------------------------------
 
@@ -254,4 +263,32 @@ create_wordcloud_clip <- function(subtitle_df) {
     ggplot2::scale_color_manual(values = c("#d95f02", "#1b9e77")) +
     ggplot2::theme_minimal()
   
+}
+
+# Create clip-specific vader plot ------------------------------------------
+
+create_vader_clip <- function(vader_df) {
+  vader_df |> 
+    ggplot2::ggplot(
+      ggplot2::aes(
+        x = start, 
+        xend = end, 
+        y = compound, 
+        yend = compound,
+        color = compound
+      )
+    ) +
+    ggplot2::geom_segment(linewidth = 3/4) +
+    ggplot2::geom_point(size = 1.5) +
+    ggplot2::scale_color_gradient2(
+      limits = c(-1, 1), 
+      low = "#d95f02", 
+      mid = "grey30", 
+      high = "#1b9e77",
+      guide = NULL
+    ) +
+    ggplot2::scale_y_continuous(limits = c(-1, 1)) +
+    ggplot2::scale_x_continuous(labels = s_to_ts) +
+    ggplot2::labs(x = "Timestamp within Clip", y = "Subtitle VADER") +
+    ggplot2::theme_grey()
 }

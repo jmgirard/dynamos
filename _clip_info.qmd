@@ -8,6 +8,7 @@ holistic_df <- get_holistic_df(params$abbrev)
 info_df <- get_info_df(params$abbrev)
 mediainfo_df <- get_mediainfo_df(params$abbrev)
 subtitle_df <- get_subtitle_df(params$abbrev)
+vader_df <- get_vader_df(params$abbrev)
 ```
 
 ## Film Information
@@ -116,6 +117,18 @@ The following wordcloud shows the words used in this clip, scaled by number of o
 #| cache: true
 
 create_wordcloud_clip(subtitle_df)
+```
+
+The following figure shows the estimated sentiment (VADER compound score) for each subtitle line (orange = negative, green = positive, grey = neutral or unsure).
+
+```{r vader}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 4
+#| out-width: "100%"
+#| cache: true
+
+create_vader_clip(vader_df)
 ```
 
 The table below shows all subtitles in this clip with the start and stop time of each subtitle's appearance in seconds.
