@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.323">
+<meta name="generator" content="quarto-1.3.361">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -58,7 +58,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -616,7 +617,7 @@ All information in this section came from <a href="https://en.wikipedia.org/wiki
 <tr class="odd">
 <td style="text-align: left;">Rater</td>
 <td style="text-align: left;">Variance</td>
-<td style="text-align: right;">0.974</td>
+<td style="text-align: right;">0.973</td>
 <td style="text-align: right;">0.742</td>
 <td style="text-align: right;">1.422</td>
 <td style="text-align: right;">0.455</td>
@@ -643,8 +644,8 @@ All information in this section came from <a href="https://en.wikipedia.org/wiki
 
 </div>
 </div>
-<p>From these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k).</p>
-<div class="cell" data-hash="GreenMile_cache/html/icc_summary_f071c1c1d9fe31ec8c15b5822b87dce1">
+<p>From these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here are the balanced average-measures consistency formulation or ICC(C,k) and the balanced single-measures consistency formulation or ICC(C,1).</p>
+<div class="cell" data-hash="GreenMile_cache/html/icc_summary_3423a65d5325fe9df8c26b8038c39bca">
 <div class="cell-output-display">
 <table class="table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
@@ -659,10 +660,18 @@ All information in this section came from <a href="https://en.wikipedia.org/wiki
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">ICC(C,1)</td>
+<td style="text-align: right;">0.204</td>
+<td style="text-align: right;">0.177</td>
+<td style="text-align: right;">0.241</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Relative</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">ICC(C,k)</td>
 <td style="text-align: right;">0.951</td>
 <td style="text-align: right;">0.942</td>
-<td style="text-align: right;">0.96</td>
+<td style="text-align: right;">0.960</td>
 <td style="text-align: right;">75</td>
 <td style="text-align: left;">Relative</td>
 </tr>
@@ -673,7 +682,7 @@ All information in this section came from <a href="https://en.wikipedia.org/wiki
 </div>
 </div>
 <p>Below, we can also visualize the posterior distributions of each of these parameters. Values with higher posterior density are more probable.</p>
-<div class="cell" data-hash="GreenMile_cache/html/icc_plot_45e0c66f88bc1314e446196de6a3cc96">
+<div class="cell" data-hash="GreenMile_cache/html/icc_plot_bdc37fe0d04c4a0e8b81adacb0147e9d">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -922,7 +931,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":true,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":true,"closeEffect":"zoom","openEffect":"zoom"});</script>
 
 
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.323">
+<meta name="generator" content="quarto-1.3.361">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -58,7 +58,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -636,7 +637,7 @@ All information in this section came from <a href="https://en.wikipedia.org/wiki
 <tr class="odd">
 <td style="text-align: left;">Rater</td>
 <td style="text-align: left;">Variance</td>
-<td style="text-align: right;">0.457</td>
+<td style="text-align: right;">0.458</td>
 <td style="text-align: right;">0.354</td>
 <td style="text-align: right;">0.689</td>
 <td style="text-align: right;">0.252</td>
@@ -644,10 +645,10 @@ All information in this section came from <a href="https://en.wikipedia.org/wiki
 <tr class="even">
 <td style="text-align: left;">Timepoint</td>
 <td style="text-align: left;">Variance</td>
-<td style="text-align: right;">0.455</td>
+<td style="text-align: right;">0.456</td>
 <td style="text-align: right;">0.384</td>
 <td style="text-align: right;">0.566</td>
-<td style="text-align: right;">0.250</td>
+<td style="text-align: right;">0.251</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Residual</td>
@@ -663,8 +664,8 @@ All information in this section came from <a href="https://en.wikipedia.org/wiki
 
 </div>
 </div>
-<p>From these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k).</p>
-<div class="cell" data-hash="LadyBird_cache/html/icc_summary_d0674d70190e8b63d989af20befac83c">
+<p>From these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here are the balanced average-measures consistency formulation or ICC(C,k) and the balanced single-measures consistency formulation or ICC(C,1).</p>
+<div class="cell" data-hash="LadyBird_cache/html/icc_summary_7d0343c44e52f928c37fef7cb849e739">
 <div class="cell-output-display">
 <table class="table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
@@ -679,6 +680,14 @@ All information in this section came from <a href="https://en.wikipedia.org/wiki
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">ICC(C,1)</td>
+<td style="text-align: right;">0.335</td>
+<td style="text-align: right;">0.297</td>
+<td style="text-align: right;">0.385</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Relative</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">ICC(C,k)</td>
 <td style="text-align: right;">0.974</td>
 <td style="text-align: right;">0.969</td>
@@ -693,7 +702,7 @@ All information in this section came from <a href="https://en.wikipedia.org/wiki
 </div>
 </div>
 <p>Below, we can also visualize the posterior distributions of each of these parameters. Values with higher posterior density are more probable.</p>
-<div class="cell" data-hash="LadyBird_cache/html/icc_plot_d45656c5d2981b4d5ba046a096bff298">
+<div class="cell" data-hash="LadyBird_cache/html/icc_plot_578c636d3eadf4115be13996da83b120">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -942,7 +951,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"openEffect":"zoom","descPosition":"bottom","selector":".lightbox"});</script>
 
 
 

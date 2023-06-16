@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.323">
+<meta name="generator" content="quarto-1.3.361">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -58,7 +58,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -701,7 +702,7 @@ All information in this section came from <a href="https://en.wikipedia.org/wiki
 <tr class="odd">
 <td style="text-align: left;">Rater</td>
 <td style="text-align: left;">Variance</td>
-<td style="text-align: right;">0.674</td>
+<td style="text-align: right;">0.676</td>
 <td style="text-align: right;">0.516</td>
 <td style="text-align: right;">0.983</td>
 <td style="text-align: right;">0.462</td>
@@ -709,7 +710,7 @@ All information in this section came from <a href="https://en.wikipedia.org/wiki
 <tr class="even">
 <td style="text-align: left;">Timepoint</td>
 <td style="text-align: left;">Variance</td>
-<td style="text-align: right;">0.227</td>
+<td style="text-align: right;">0.226</td>
 <td style="text-align: right;">0.189</td>
 <td style="text-align: right;">0.280</td>
 <td style="text-align: right;">0.155</td>
@@ -728,8 +729,8 @@ All information in this section came from <a href="https://en.wikipedia.org/wiki
 
 </div>
 </div>
-<p>From these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k).</p>
-<div class="cell" data-hash="Moonlight_cache/html/icc_summary_cdf2cc2aaf6965addcbe276acad1282d">
+<p>From these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here are the balanced average-measures consistency formulation or ICC(C,k) and the balanced single-measures consistency formulation or ICC(C,1).</p>
+<div class="cell" data-hash="Moonlight_cache/html/icc_summary_69980348b8253cc7aa4221c720a945e6">
 <div class="cell-output-display">
 <table class="table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
@@ -744,6 +745,14 @@ All information in this section came from <a href="https://en.wikipedia.org/wiki
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">ICC(C,1)</td>
+<td style="text-align: right;">0.291</td>
+<td style="text-align: right;">0.252</td>
+<td style="text-align: right;">0.333</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Relative</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">ICC(C,k)</td>
 <td style="text-align: right;">0.969</td>
 <td style="text-align: right;">0.962</td>
@@ -758,7 +767,7 @@ All information in this section came from <a href="https://en.wikipedia.org/wiki
 </div>
 </div>
 <p>Below, we can also visualize the posterior distributions of each of these parameters. Values with higher posterior density are more probable.</p>
-<div class="cell" data-hash="Moonlight_cache/html/icc_plot_2f49bdf0f08665cd9218b53ddf289ed9">
+<div class="cell" data-hash="Moonlight_cache/html/icc_plot_df65cc9a6d37b32d22d7ae37aa11155e">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1007,7 +1016,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});</script>
 
 
 

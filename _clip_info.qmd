@@ -201,7 +201,7 @@ summary(icc_res, which = "variances") |>
   kableExtra::kable_styling()
 ```
 
-From these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here is the balanced average-measures consistency formulation or ICC(C,k).
+From these variance components, we can estimate inter-rater reliability of the ratings. There are many formulations of the two-way intraclass correlation (ICC), but the most relevant to our purposes here are the balanced average-measures consistency formulation or ICC(C,k) and the balanced single-measures consistency formulation or ICC(C,1).
 
 ```{r icc_summary}
 #| echo: false
@@ -210,7 +210,7 @@ From these variance components, we can estimate inter-rater reliability of the r
 icc_summary <- 
   summary(icc_res, which = "iccs") |> 
   dplyr::rename_all(.funs = stringr::str_to_title) |> 
-  dplyr::filter(Term == "ICC(C,k)")
+  dplyr::filter(Term %in% c("ICC(C,k)", "ICC(C,1)"))
 
 icc_summary |> 
   dplyr::mutate(Abbrev = params$abbrev, .before = 1) |> 
@@ -238,7 +238,8 @@ plot(
     "Timepoint Variance", 
     "Rater Variance", 
     "Residual Variance", 
-    "ICC(C,k)"
+    "ICC(C,k)",
+    "ICC(C,1)"
   ),
   panel_spacing = 4
 )
