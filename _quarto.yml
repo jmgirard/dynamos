@@ -47,6 +47,8 @@ website:
             href: NoCountry.qmd
           - text: "[ParentTrap] The Parent Trap"
             href: ParentTrap.qmd
+          - text: "[PulpFiction] Pulp Fiction"
+            href: PulpFiction.qmd
           - text: "[PursuitHappyness] The Pursuit of Happyness"
             href: PursuitHappyness.qmd
           - text: "[SilenceLambs] The Silence of the Lambs"
