@@ -59,7 +59,7 @@ website:
             href: Zodiac.qmd
       - text: "Request Access"
         href: index.qmd
-  page-footer: "Copyright 2023, Jeffrey Girard, Yanmei Tie, & Einat Liebenthal"
+  page-footer: "Copyright 2023 &copy; Girard, Tie, &amp; Liebenthal"
 format:
   html:
     theme: cosmo
