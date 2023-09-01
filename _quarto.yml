@@ -58,7 +58,7 @@ website:
           - text: "[Zodiac] Zodiac"
             href: Zodiac.qmd
       - text: "Request Access"
-        href: index.qmd
+        href: https://redcap.partners.org/redcap/surveys/?s=MLY8Y9XFNK9NLC3N
   page-footer: "Copyright 2023 &copy; Girard, Tie, &amp; Liebenthal"
 format:
   html:
