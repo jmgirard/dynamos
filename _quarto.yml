@@ -4,64 +4,6 @@ project:
 
 website:
   title: "DynAMoS Database"
-  navbar:
-    background: dark
-    right:
-      - text: "Database Paper"
-        href: paper.qmd
-      - text: "Database Info."
-        href: overview.qmd
-      - text: "Movie Clip Info."
-        menu:
-          - text: "[AkeelahBee] Akeelah and the Bee"
-            href: AkeelahBee.qmd
-          - text: "[BealeStreet] If Beale Street Could Talk"
-            href: BealeStreet.qmd
-          - text: "[CatchMe] Catch Me If You Can"
-            href: CatchMe.qmd
-          - text: "[DaysSummer] 500 Days of Summer"
-            href: DaysSummer.qmd
-          - text: "[Fences] Fences"
-            href: Fences.qmd
-          - text: "[ForrestGump] Forrest Gump"
-            href: ForrestGump.qmd
-          - text: "[GoodWill] Good Will Hunting"
-            href: GoodWill.qmd
-          - text: "[GreenMile] The Green Mile"
-            href: GreenMile.qmd
-          - text: "[KingsSpeech] The King's Speech"
-            href: KingsSpeech.qmd
-          - text: "[LadyBird] Lady Bird"
-            href: LadyBird.qmd
-          - text: "[LegallyBlonde] Legally Blonde"
-            href: LegallyBlonde.qmd
-          - text: "[LittleMiss] Little Miss Sunshine"
-            href: LittleMiss.qmd
-          - text: "[MarriageStory] Marriage Story"
-            href: MarriageStory.qmd
-          - text: "[Miracle] Miracle"
-            href: Miracle.qmd
-          - text: "[Moonlight] Moonlight"
-            href: Moonlight.qmd
-          - text: "[NoCountry] No Country for Old Men"
-            href: NoCountry.qmd
-          - text: "[ParentTrap] The Parent Trap"
-            href: ParentTrap.qmd
-          - text: "[PulpFiction] Pulp Fiction"
-            href: PulpFiction.qmd
-          - text: "[PursuitHappyness] The Pursuit of Happyness"
-            href: PursuitHappyness.qmd
-          - text: "[SilenceLambs] The Silence of the Lambs"
-            href: SilenceLambs.qmd
-          - text: "[SocialNetwork] The Social Network"
-            href: SocialNetwork.qmd
-          - text: "[Zodiac] Zodiac"
-            href: Zodiac.qmd
-      - text: "Request Access"
-        href: https://redcap.partners.org/redcap/surveys/?s=MLY8Y9XFNK9NLC3N
-  page-footer: "Copyright 2023 &copy; Girard, Tie, &amp; Liebenthal"
 format:
   html:
     theme: cosmo
-    css: styles.css
-    toc: true

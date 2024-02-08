@@ -1,5 +1,0 @@
----
-title: "Database Paper"
----
-
-{{< pdf data/ACII_Postprint.pdf width=100% height=1050 border=1 >}}

@@ -1,3 +1,0 @@
-Abbrev,Score,Term,Estimate,Lower,Upper,Raters,Error
-PulpFiction,Rating,"ICC(C,1)",0.17249468045172708,0.1464117723555996,0.20404458776184906,1,Relative
-PulpFiction,Rating,"ICC(C,k)",0.9432414129360048,0.931273743864784,0.952945141742914,79,Relative

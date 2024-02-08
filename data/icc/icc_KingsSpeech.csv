@@ -1,3 +1,0 @@
-Abbrev,Score,Term,Estimate,Lower,Upper,Raters,Error
-KingsSpeech,Rating,"ICC(C,1)",0.18467262201447537,0.1658435075419634,0.20961825727191613,1,Relative
-KingsSpeech,Rating,"ICC(C,k)",0.9463403100339266,0.938683478552065,0.953317445880235,77,Relative
